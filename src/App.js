@@ -5,7 +5,7 @@ import Header from './components/layout/Header';
 import Todos from './components/Todos';
 import AddTodo from './components/AddTodo';
 import About from './components/pages/About';
-// import uuid from 'uuid';
+//import uuid from 'uuid';
 import axios from 'axios';
 
 class App extends React.Component {
@@ -39,7 +39,7 @@ class App extends React.Component {
   //Add Todo
   addTodo = (title) => {
     axios.post('https://jsonplaceholder.typicode.com/todos', {
-      title, 
+      title,
       completed: false
     })
       .then(res =>  this.setState({ todos: [...this.state.todos, res.data]}) );
